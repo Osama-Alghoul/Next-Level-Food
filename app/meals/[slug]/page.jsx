@@ -1,15 +1,15 @@
-import classes from './page.module.css';
-import Image from 'next/image';
-import { getMeal } from '@/lib/meals';
-import { notFound } from 'next/navigation';
+import classes from "./page.module.css";
+import Image from "next/image";
+import { getMeal } from "@/lib/meals";
+import { notFound } from "next/navigation";
 
 export default function MealDetail({ params }) {
   const meal = getMeal(params.slug);
-  if(!meal) {
+  if (!meal) {
     notFound();
   }
 
-  meal.instructions = meal.instructions.replace(/\n/g, '<br>');
+  meal.instructions = meal.instructions.replace(/\n/g, "<br>");
   return (
     <>
       <header className={classes.header}>
@@ -25,7 +25,10 @@ export default function MealDetail({ params }) {
         </div>
       </header>
       <main>
-        <p className={classes.instructions} dangerouslySetInnerHTML={{ __html: meal.instructions }}></p>
+        <p
+          className={classes.instructions}
+          dangerouslySetInnerHTML={{ __html: meal.instructions }}
+        ></p>
       </main>
     </>
   );
