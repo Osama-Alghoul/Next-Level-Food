@@ -5,7 +5,7 @@ import { shareMeal } from "@/lib/actions";
 import MealsFormSubmit from "@/components/meals/meals-form-submit";
 
 export default function ShareMealPage() {
-  
+
   return (
     <>
       <header className={classes.header}>
