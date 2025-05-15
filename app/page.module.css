@@ -10,6 +10,15 @@
     width: 40rem;
     height: 25rem;
   }
+
+  @media (max-width: 768px) {
+  .slideshow {
+    width: 100%;
+  }
+  .header {
+    flex-wrap: wrap;
+  }
+}
   
   .hero {
     color: #ddd6cb;
