@@ -12,6 +12,17 @@
     height: 20rem;
 }
 
+@media screen and (max-width: 768px) {
+    .image {
+        width: 100%;
+    }
+    .header {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    
+}
+
 .header img {
     object-fit: cover;
     border-radius: 8px;
